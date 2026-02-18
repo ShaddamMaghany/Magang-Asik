@@ -1,18 +1,4 @@
 <script lang="ts">
-	import Datatable from '$lib/components/ui/Datatable.svelte';
-
-	let routers = [];
-	const columns = [
-		{ title: 'Name', key: 'name' },
-		{ title: 'Gateway', key: 'gateway' }
-	];
-
-
-<Datatable
-	url="/v1/router"
-	bind:data={routers}
-	{columns}
-/>
 	import * as Pagination from '$lib/components/shadcn/ui/pagination/index.js';
 	import api from '$lib/axios-instance';
 	import type { DatatableColumn, PaginationData, HttpResponse, PaginationMeta } from '$lib/types';
